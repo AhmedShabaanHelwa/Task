@@ -15,7 +15,7 @@ namespace Task.Models
     {
         public string template_type { get; set; }
         public Elements elements { get; set; }
-        public Buttons buttons { get; set; }
+        public List<Buttons> buttons { get; set; }
     }
 
     public class Buttons : TemplateBase
@@ -43,5 +43,15 @@ namespace Task.Models
     {
         public string webview_height_ratio { get; set; }
 
+    }
+
+    //Recipient Object
+    public class Recipient
+    {
+        public Recipient()
+        {
+            this.id = "{psid}";
+        }
+        public string id {set; get;}
     }
 }

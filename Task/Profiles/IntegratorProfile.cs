@@ -19,6 +19,8 @@ namespace Task.Profiles
                 .ForPath(d => d.elements.image_url, opt => { opt.MapFrom(s => s.data.avatar); })
                 //!AhmedShaban: last_name to subtitle
                 .ForPath(d => d.elements.subtitle, opt => { opt.MapFrom(s => s.data.last_name); });
+            //CreateMap<UsersDto, MultiUsersRespond>()
+            //.ForPath(d => d.message.attachment.payload.elements, opt => { opt.MapFrom(s => s.data); });
         }
     }
 }

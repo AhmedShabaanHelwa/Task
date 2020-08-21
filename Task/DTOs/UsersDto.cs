@@ -1,11 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Task.DTOs
 {
-    public class UserDto
+    public class UsersDto
     {
+        public string page { get; set; }
+        public string per_page { get; set; }
+        public string total_pages { get; set; }
         //Property 1: user data
-        public userData data { get; set; }
+        public List<userData> data { get; set; }
         //Property 2: user data
         public userAd ad { get; set; }
 
